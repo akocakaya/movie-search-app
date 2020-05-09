@@ -7,9 +7,9 @@ const Movie = ({ movie }) => {
     
     return (
         <div className="movie" onClick={() => window.open(`https://www.imdb.com/title/${movie.imdbID}/`, '_blank')}>
-            <h2 className="movie-title">
+            <div className="movie-title">
                 { movie.Title }
-            </h2>
+            </div>
             <div className="movie-img-container">
                 <img
                     className="movie-img"

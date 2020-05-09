@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Search from './Search';
 import Movie from './Movie';
@@ -13,7 +13,7 @@ const App = () => {
         setLoading(true);
         setErrorMessage(null);
 
-        fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://www.omdbapi.com/?s=${searchValue ?? 'map'}&apikey=${process.env.REACT_APP_API_KEY}`)
             .then(response => response.json())
             .then(jsonResponse => {
                 console.log('jsonResponse -> ', jsonResponse)
@@ -27,6 +27,10 @@ const App = () => {
             });
     };
 
+    useEffect(() => {
+        search()
+    }, []);
+
     return (
         <div className="App">
             <Header text="Movie Search App" />
@@ -38,7 +42,7 @@ const App = () => {
                     :   errorMessage 
                             ?   <div className="errorMessage">{errorMessage}</div> 
                             :   movies.map((movie, index) => (
-                                    <Movie key={`${index}-${movie.Title}`} movie={movie} />
+                                    <Movie key={`movie-${index}`} movie={movie} />
                                 ))
             }
             </div>

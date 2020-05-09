@@ -53,4 +53,12 @@
 
 .movie {
     padding: 5px 25px 10px 25px;
+    width: 15%;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }

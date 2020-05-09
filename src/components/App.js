@@ -22,7 +22,15 @@ const App = () => {
         <div className="App">
             <Header text="Movie Search App" />
             <Search search={search} />
-            <Movie />
+            <div className="movies">
+                {
+                    movies.map( 
+                        ( movie, index ) => {
+                            return <Movie key={'movie' + index} movie={ movie } />
+                        }    
+                    )
+                }
+            </div>
         </div>
     );
 }

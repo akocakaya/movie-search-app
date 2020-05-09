@@ -24,7 +24,7 @@
     height: 25px;
 }
 
-.search > .search-input{
+.search > .search-input {
     width: 40%;
     min-width: 170px;
     border-radius: 3px;
@@ -34,7 +34,7 @@
     padding-left: 10px;
 }
 
-.search > .search-button{
+.search > .search-button {
     width: 5%;
     min-width: 100px;
     margin-left: 5px;
@@ -43,9 +43,14 @@
     border-color: #282c34;
     border-style: solid;
     transition: background-color 0.6s;
+    cursor: pointer;
 }
 
-.search > .search-button:hover{
+.search > .search-button:hover {
     color:  white;
     background-color: #282c34;
+}
+
+.movie {
+    padding: 5px 25px 10px 25px;
 }

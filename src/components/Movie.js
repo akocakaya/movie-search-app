@@ -7,15 +7,20 @@ const Movie = () => {
     
     return (
         <div className="movie">
-        <h2>{'title'}</h2>
-        <div>
-            <img
-                width="200"
-                alt={`The movie titled: title`}
-                src={DEFAULT_PLACEHOLDER_IMAGE}
-            />
-        </div>
-        <p>({'year'})</p>
+            <h2 className="movie-title">
+                { 'title' }
+            </h2>
+            <div className="movie-img-container">
+                <img
+                    className="movie-img"
+                    width="200"
+                    alt={`The movie titled: title`}
+                    src={DEFAULT_PLACEHOLDER_IMAGE}
+                />
+            </div>
+            <div className="movie-info">
+                ({'year'})
+            </div>
         </div>
     );
 };

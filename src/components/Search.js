@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Search = () => {
+const Search = ({ search }) => {
   const [searchValue, setSearchValue] = useState("");
   
     const handleSearchInputChanges = (e) => {
@@ -13,7 +13,7 @@ const Search = () => {
 
     const callSearchFunction = (e) => {
         e.preventDefault();
-        console.log('e -> ', e)
+        search(searchValue);
         resetInputField();
     }
 

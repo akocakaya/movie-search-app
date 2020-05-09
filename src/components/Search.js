@@ -20,11 +20,13 @@ const Search = () => {
     return (
         <form className="search">
             <input
+                className="search-input"
                 value={searchValue}
                 onChange={handleSearchInputChanges}
                 type="text"
             />
             <input 
+                className="search-button"
                 onClick={callSearchFunction} 
                 type="submit" 
                 value="SEARCH" 

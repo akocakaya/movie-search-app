@@ -6,7 +6,7 @@ import '../App.css';
 
 const App = () => {
     const [loading, setLoading] = useState(false);
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies]   = useState([]);
     const [errorMessage, setErrorMessage] = useState(null);
 
     const search = searchValue => {

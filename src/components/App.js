@@ -16,7 +16,6 @@ const App = () => {
         fetch(`https://www.omdbapi.com/?s=${searchValue ?? 'map'}&apikey=${process.env.REACT_APP_API_KEY}`)
             .then(response => response.json())
             .then(jsonResponse => {
-                console.log('jsonResponse -> ', jsonResponse)
                 if (jsonResponse.Response === "True") {
                     setMovies(jsonResponse.Search);
                     setLoading(false);
